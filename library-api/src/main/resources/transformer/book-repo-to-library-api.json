@@ -1,0 +1,14 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+
+        "id": "bookId",
+        "name": "bookName",
+        "author": "author",
+        "type": "type"
+      }
+    }
+
+
+]
