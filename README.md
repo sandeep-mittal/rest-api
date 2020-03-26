@@ -34,20 +34,116 @@ Both spring boot applications need to be built and run. Starting with backend se
 Clone the repository
 git clone https://github.com/sandeep-mittal/rest-api.git
 
-  
-### book-repo (backend rest api) ###
-
-1. cd <repo-path>/rest-api/books-repo-api
-2. mvn clean install
-3. cd target
-4. java -jar books-repo-api-docker.jar ( final name in pom.xml)
-
 ### library-api (front end rest api) ###
 
 1. cd <repo-path>/rest-api/library-api
 2. mvn clean install
 3. cd target
 4. java -jar library-api-docker.jar ( final name in pom.xml)
+
+___API URL:- /library-api/addBook___http://http://localhost:8080/library-api/addBook
+
+* HTTP POST
+* JSON REQUEST-Happy Scenario
+{
+        "bookId": 4,
+        "bookName": "Book04",
+        "author": "test_04",
+        "type": "Friction_04"
+    }
+* JSON RESPONSE
+{
+    "status": "SUCCESS",
+    "message": "Added Book04 successfully."
+}
+
+* JSON REQUEST-Error Scenario
+{
+        "bookId": 4,
+        "author": "test_04",
+        "type": "Friction_04"
+    }
+* JSON RESPONSE
+{
+    "timestamp": "2020-03-26T08:31:53.517+0000",
+    "status": 500,
+    "error": "Internal Server Error",
+    "message": "bookName: null found, string expected",
+    "path": "/library-api/addBook"
+}
+___API URL:- /library-api/removeBook/{bookId}___http://http://localhost:8080/library-api/removeBook/1
+
+* HTTP GET
+
+* JSON RESPONSE- Happy Scenario
+{
+    "status": "SUCCESS",
+    "message": "Book is removed successfully"
+}
+
+### book-repo (backend rest api) ###
+
+1. cd <repo-path>/rest-api/books-repo-api
+2. mvn clean install
+3. cd target
+4. java -jar books-repo-api-docker.jar ( final name in pom.xml)
+  
+___API URL:- /book-repo/addBook___http://localhost:8085/book-repo/addBook
+
+* HTTP POST
+* JSON REQUEST-Happy Scenario
+
+{
+    "id": 1,
+    "name": "Book01",
+    "author": "test_01",
+     "type" : "Friction"
+}
+
+
+* JSON RESPONSE Added Book01 successfully.
+
+___API URL:- /book-repo/getBooks___http://localhost:8085/book-repo/getBooks
+
+* HTTP GET
+
+* JSON RESPONSE
+[
+    {
+        "id": 1,
+        "name": "Book01",
+        "author": "test_01",
+        "type": "Friction"
+    },
+    {
+        "id": 2,
+        "name": "Book02",
+        "author": "test_01",
+        "type": "Friction"
+    },
+    {
+        "id": 4,
+        "name": "Book04",
+        "author": "test_04",
+        "type": "Friction_04"
+    }
+]
+
+___API URL:- /book-repo/getBook/{id}___http://localhost:8085/book-repo/getbook/1
+
+* HTTP GET
+* JSON RESPONSE 
+{
+    "id": 1,
+    "name": "Book01",
+    "author": "test_01",
+    "type": "Friction"
+}
+
+___API URL:- /book-repo/removeBook?{id}___http://localhost:8085/book-repo/removeBook?bookId=1
+
+* HTTP GET
+* JSON RESPONSE Book is removed successfully
 
 ## Docker ##
 1. docker -t books-repo-api-docker.jar .
