@@ -41,7 +41,7 @@ git clone https://github.com/sandeep-mittal/rest-api.git
 3. cd target
 4. java -jar library-api-docker.jar ( final name in pom.xml)
 
-___API URL:- /library-api/addBook___http://http://localhost:8080/library-api/addBook
+___API URL /library-api/addBook___ http://http://localhost:8080/library-api/addBook
 
 * HTTP POST
 * JSON REQUEST-Happy Scenario
@@ -71,7 +71,7 @@ ___API URL:- /library-api/addBook___http://http://localhost:8080/library-api/add
     "message": "bookName: null found, string expected",
     "path": "/library-api/addBook"
 }
-___API URL:- /library-api/removeBook/{bookId}___http://http://localhost:8080/library-api/removeBook/1
+___API URL /library-api/removeBook/{bookId}___ http://http://localhost:8080/library-api/removeBook/1
 
 * HTTP GET
 
@@ -88,7 +88,7 @@ ___API URL:- /library-api/removeBook/{bookId}___http://http://localhost:8080/lib
 3. cd target
 4. java -jar books-repo-api-docker.jar ( final name in pom.xml)
   
-___API URL:- /book-repo/addBook___http://localhost:8085/book-repo/addBook
+___API URL /book-repo/addBook___ http://localhost:8085/book-repo/addBook
 
 * HTTP POST
 * JSON REQUEST-Happy Scenario
@@ -103,7 +103,7 @@ ___API URL:- /book-repo/addBook___http://localhost:8085/book-repo/addBook
 
 * JSON RESPONSE Added Book01 successfully.
 
-___API URL:- /book-repo/getBooks___http://localhost:8085/book-repo/getBooks
+___API URL /book-repo/getBooks___ http://localhost:8085/book-repo/getBooks
 
 * HTTP GET
 
@@ -129,7 +129,7 @@ ___API URL:- /book-repo/getBooks___http://localhost:8085/book-repo/getBooks
     }
 ]
 
-___API URL:- /book-repo/getBook/{id}___http://localhost:8085/book-repo/getbook/1
+___API URL /book-repo/getBook/{id}___ http://localhost:8085/book-repo/getbook/1
 
 * HTTP GET
 * JSON RESPONSE 
@@ -140,7 +140,7 @@ ___API URL:- /book-repo/getBook/{id}___http://localhost:8085/book-repo/getbook/1
     "type": "Friction"
 }
 
-___API URL:- /book-repo/removeBook?{id}___http://localhost:8085/book-repo/removeBook?bookId=1
+___API URL /book-repo/removeBook?{id}___ http://localhost:8085/book-repo/removeBook?bookId=1
 
 * HTTP GET
 * JSON RESPONSE Book is removed successfully
