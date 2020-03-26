@@ -6,6 +6,16 @@ public class Book {
     String author;
     String type;
 
+    public Book(){
+
+    }
+    public Book(int bookId, String bookName, String author, String type) {
+        this.bookId = bookId;
+        this.bookName = bookName;
+        this.author = author;
+        this.type = type;
+    }
+
     public int getBookId() {
         return bookId;
     }
