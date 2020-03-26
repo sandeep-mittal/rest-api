@@ -82,7 +82,8 @@ ___API URL /library-api/removeBook/{bookId}___ http://http://localhost:8080/libr
 
 * HTTP GET
 
-* JSON RESPONSE- Happy Scenario
+* ____JSON RESPONSE- Happy Scenario___
+
 {
     "status": "SUCCESS",
     "message": "Book is removed successfully"
@@ -98,7 +99,7 @@ ___API URL /library-api/removeBook/{bookId}___ http://http://localhost:8080/libr
 ___API URL /book-repo/addBook___ http://localhost:8085/book-repo/addBook
 
 * HTTP POST
-* JSON REQUEST-Happy Scenario
+* ___JSON REQUEST-Happy Scenario___
 
 {
     "id": 1,
@@ -108,13 +109,13 @@ ___API URL /book-repo/addBook___ http://localhost:8085/book-repo/addBook
 }
 
 
-* JSON RESPONSE Added Book01 successfully.
+* ____JSON RESPONSE___ Added Book01 successfully.
 
 ___API URL /book-repo/getBooks___ http://localhost:8085/book-repo/getBooks
 
 * HTTP GET
 
-* JSON RESPONSE
+* ___JSON RESPONSE___
 [
     {
         "id": 1,
@@ -139,7 +140,8 @@ ___API URL /book-repo/getBooks___ http://localhost:8085/book-repo/getBooks
 ___API URL /book-repo/getBook/{id}___ http://localhost:8085/book-repo/getbook/1
 
 * HTTP GET
-* JSON RESPONSE 
+* ___JSON RESPONSE___
+
 {
     "id": 1,
     "name": "Book01",
@@ -150,7 +152,7 @@ ___API URL /book-repo/getBook/{id}___ http://localhost:8085/book-repo/getbook/1
 ___API URL /book-repo/removeBook?{id}___ http://localhost:8085/book-repo/removeBook?bookId=1
 
 * HTTP GET
-* JSON RESPONSE Book is removed successfully
+* ____JSON RESPONSE___ Book is removed successfully
 
 ## Docker ##
 1. docker -t books-repo-api-docker.jar .
