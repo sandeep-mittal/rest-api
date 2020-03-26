@@ -44,26 +44,32 @@ git clone https://github.com/sandeep-mittal/rest-api.git
 ___API URL /library-api/addBook___ http://http://localhost:8080/library-api/addBook
 
 * HTTP POST
-* JSON REQUEST-Happy Scenario
+* ____JSON REQUEST-Happy Scenario___
+
 {
         "bookId": 4,
         "bookName": "Book04",
         "author": "test_04",
         "type": "Friction_04"
     }
-* JSON RESPONSE
+    
+* ____JSON RESPONSE-Happy Scenario___
+
 {
     "status": "SUCCESS",
     "message": "Added Book04 successfully."
 }
 
-* JSON REQUEST-Error Scenario
+
+* ___JSON REQUEST-Error Scenario___
 {
         "bookId": 4,
         "author": "test_04",
         "type": "Friction_04"
     }
-* JSON RESPONSE
+    
+* ___JSON RESPONSE-Error Scenario___
+
 {
     "timestamp": "2020-03-26T08:31:53.517+0000",
     "status": 500,
@@ -71,6 +77,7 @@ ___API URL /library-api/addBook___ http://http://localhost:8080/library-api/addB
     "message": "bookName: null found, string expected",
     "path": "/library-api/addBook"
 }
+
 ___API URL /library-api/removeBook/{bookId}___ http://http://localhost:8080/library-api/removeBook/1
 
 * HTTP GET
