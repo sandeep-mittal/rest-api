@@ -40,13 +40,28 @@ git clone https://github.com/sandeep-mittal/rest-api.git
 1. cd <repo-path>/rest-api/books-repo-api
 2. mvn clean install
 3. cd target
-4. java -jar books-repo-api.jar
+4. java -jar books-repo-api-docker.jar ( final name in pom.xml)
 
 ### library-api (front end rest api) ###
 
 1. cd <repo-path>/rest-api/library-api
 2. mvn clean install
 3. cd target
-4. java -jar library-api-docker.jar
+4. java -jar library-api-docker.jar ( final name in pom.xml)
 
 ## Docker ##
+1. docker -t books-repo-api-docker.jar .
+2. docken run -p 9090:8085 books-repo-api-docker.jar
+3. docker -t library-api-docker.jar .
+4. docken run -p 9090:8080 library-api-docker.jar
+
+## Docker Hub ##
+1. docker login
+2. docker tag books-repo-api-docker.jar release/books-repo-api-docker.jar
+3. docker push release/books-repo-api-docker.jar
+4. docker pull release/books-repo-api-docker.jar
+5. docker push release/library-api-docker.jar
+4. docker pull release/library-api-docker.jar
+
+
+
