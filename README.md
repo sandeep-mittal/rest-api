@@ -156,7 +156,7 @@ ___API URL /book-repo/removeBook?{id}___ http://localhost:8085/book-repo/removeB
 
 ## Docker ##
 1. docker build -t books-repo-api-docker.jar .
-2. docken run -p 9090:8085 books-repo-api-docker.jar
+2. docken run -p 9095:8085 books-repo-api-docker.jar
 3. docker build -t library-api-docker.jar .
 4. docken run -p 9090:8080 library-api-docker.jar
 
